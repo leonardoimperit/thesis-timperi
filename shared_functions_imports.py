@@ -44,3 +44,11 @@ def read_from_files(DIR_INPUT, BEGIN_DATE, END_DATE):
     df_final=df_final.replace([-1],0)
     
     return df_final
+
+def scaleData(train,test,features):
+    scaler = sklearn.preprocessing.StandardScaler()
+    scaler.fit(train[features])
+    train[features]=scaler.transform(train[features])
+    test[features]=scaler.transform(test[features])
+    
+    return (train,test)
