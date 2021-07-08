@@ -22,6 +22,55 @@ sns.set_style('darkgrid', {'axes.facecolor': '0.9'})
 import graphviz
 import xgboost
 
+# Importing Libraries
+
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+import tensorflow as tf
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA, TruncatedSVD
+import matplotlib.patches as mpatches
+import time
+
+# Classifier Libraries
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+import collections
+
+
+# Other Libraries
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
+from sklearn.pipeline import make_pipeline
+from imblearn.pipeline import make_pipeline as imbalanced_make_pipeline
+from imblearn.over_sampling import SMOTE
+from imblearn.under_sampling import NearMiss
+from imblearn.metrics import classification_report_imbalanced
+from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score, accuracy_score, classification_report
+from collections import Counter
+from sklearn.model_selection import KFold, StratifiedKFold
+import warnings
+warnings.filterwarnings("ignore")
+
+#GAN Libraries
+%matplotlib inline
+import os
+import random
+from tqdm import tqdm_notebook as tqdm
+from keras.models import Model
+from keras.layers import Input, Reshape, GaussianNoise
+from keras.layers.core import Dense, Activation, Dropout, Flatten
+from keras.layers.normalization import BatchNormalization
+from keras.layers.convolutional import UpSampling1D, Conv1D
+from keras.layers.advanced_activations import LeakyReLU
+from keras.optimizers import Adam, SGD
+from keras.callbacks import TensorBoard
+
 import warnings
 warnings.filterwarnings('ignore')
 
