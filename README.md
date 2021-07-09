@@ -2,43 +2,48 @@
 
 
 <h2> Introduction </h2>
-The purpose of this project is to implement a Generative Adversarial Network as an oversampling method for the imbalanced problem of credit card fraud detection. We will propose it as an alternative to the very popular SMOTE oversampling technique and Random Undersampling. The dataset "credit card fraud detection" has been downloaded from Kaggle. It contains 284,807 transactions, 492 of which have been classified as frauds.  Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'.
+The purpose of this project is to implement a Generative Adversarial Network as an oversampling method for the imbalanced problem of credit card fraud detection. We will propose it as an alternative to the very popular SMOTE oversampling technique. For this purpose we will employ 2 dataset: a bigger one composed by simulated transactions (CHAPTER 5) through a credit transaction dataset simulator, and a smaller one contaning only 2 days of  real transactions. For the first one, the simulator has been developed by the ULB machine learning group (Bruxelles), the latter has been downloaded from Kaggle. It contains 284,807 transactions, 492 of which have been classified as frauds.  Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'.
 
 <h2> Our Goals: </h2>
 <ul>
-<li> Understand the  class and features distribution of our Dataset </li>
+<li> Understand the  class and features distribution of our Datasets </li>
 <li> Implement different oversampling and undersampling techniques to deal with our imbalanced dataset</li>
-<li> Determine the Classifiers we are going to use based on specific performance measures other than from Accuracy)  </li>
+<li> Determine the Classifiers we are going to use based on specific performance measures other than from Accuracy </li>
 <li> Analyze the economic impact of our algorithm on an average company in the market</li>
 </ul>
 
 
 <h2> Index: </h2>
 
-I. <b>Data Analysis </b><br>
-1.1) [Gather Sense of our data](#da) <br><br>
+V. <b>Application on a simulated dataset </b><br>
+5.1) <b>[Gather Sense of our data](#da) <br>
+5.1.1) [Functioning of the transaction simulator](#da) <br>
+5.1.2) [Data description and variable transformation](#da) <br>
+5.1.3) [Base-line classification without oversampling](#da) <br><b>
+5.2) <b>GAN OVERSAMPLING</b><br>
+5.2.1) [Creation of a Generative Adversarial Network](#distributing)<br>
+5.2.2) [Classification models](#distributing)<br>
+5.2.3) [Performance](#splitting)<br><br>
 
-II. <b>Data preparation</b><br>
-2.1) [Data cleaning](#distributing)<br>
-2.2) [Scaling and Distributing](#distributing)<br>
-2.3) [Train and Test set creation](#splitting)<br><br>
+5.3 <b>SMOTE oversampling</b><br>
+5.3.1) [SMOTE implementation](#correlating)<br>
+5.3.2) [Classification and performance](#anomaly)<br><br>
 
-III. <b>Oversampling with GAN</b><br>
-3.1) [Preparing the dataset for GAN learning](#correlating)<br>
-3.2) [GAN definition](#anomaly)<br>
-3.3) [Generating new data using GAN](#anomaly)<br>
-3.4) [Classification without cross validation](#anomaly)<br>
-3.4) [Cross Validation with GAN](#anomaly)<br> 
-3.5) [Performance and testing](#logistic)<br><br> 
+5.4) <br>[Model selection](#anomaly)<br>
 
 
-IV. <b>SMOTE Oversampling</b><br>
-4.1) [Classifiers and Cross Validation](#classifiers)<br>
-4.2) [Performance and Testing](#logistic)<br><br> 
+VI. <b>Application on a real dataset </b><br>
+6.1) [Gather Sense of our data](#da) <br><br>
+6.1.1) [Data description and variable transformation](#da) <br><br>
+6.2) <b>GAN OVERSAMPLING</b><br>
+6.2.1) [ Tuning of the Generative Adversarial Networkk](#distributing)<br>
+6.2.2) [Model performance ](#distributing)<br>
+6.2.3) [Performance](#splitting)<br><br>
 
-V. <b>Model comparison </b><br>
-5.1) [Confusion matrices](#testing_logistic)<br>
-5.2) [Economic Analysis](#neural_networks)
+6.3 <b>SMOTE oversampling</b><br>
+6.3.1) [Classification and performance](#anomaly)<br>
+6.4) [Model selection](#anomaly)<br>
+
 
 
 <h2> References: </h2>
