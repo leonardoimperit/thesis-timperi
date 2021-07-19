@@ -61,7 +61,6 @@ from keras.callbacks import TensorBoard
 import sklearn
 from sklearn import *
 
-%matplotlib inline
 
 import matplotlib.pyplot as plt
 import seaborn as sns
