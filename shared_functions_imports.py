@@ -105,7 +105,6 @@ import warnings
 warnings.filterwarnings("ignore")
 
 #GAN Libraries
-%matplotlib inline
 import os
 import random
 from tqdm import tqdm_notebook as tqdm
